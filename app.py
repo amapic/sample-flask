@@ -69,7 +69,6 @@ def filter_data_detail(reg,vaccin):
 		return df_vaccin_detail.query('reg==@reg & vaccin==@vaccin').reset_index().to_json()
 		
 @app.route("/")
-@cross_origin()
 def helloWorld():
   return "Hello, cross-origin-world!"
 	
